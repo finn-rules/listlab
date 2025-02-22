@@ -4,7 +4,9 @@ package edu.grinnell.csc207.listlab;
  * A linked implementation of the list ADT.
  */
 public class LinkedList {
-   
+
+    private class Node {
+
         public int value;
         public Node next;
 
