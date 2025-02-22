@@ -1,9 +1,7 @@
 # List Implementation lab
 
-Authors: (_TODO: fill in names here!_)
+Authors: Finn Rowles, Annie Li, Elliot Gan
 
 ## Resources
 
-*   (_TODO: fill in resources here!_)
-*   ...
-*   ...
+*  Professor Osera's website and insight in lectures
