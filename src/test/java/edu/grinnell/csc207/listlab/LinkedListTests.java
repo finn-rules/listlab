@@ -9,6 +9,7 @@ import net.jqwik.api.Property;
 import net.jqwik.api.constraints.IntRange;
 
 public class LinkedListTests {
+
     @Test
     public void emptyListTest() {
         LinkedList list = new LinkedList();
@@ -31,5 +32,25 @@ public class LinkedListTests {
             list.add(i);
         }
         return list.size() == sz;
+    }
+
+    @Property
+    public boolean DeleteFirst(@ForAll @IntRange(min = 1, max = 1000) int sz) {
+        LinkedList list = new LinkedList();
+        for (int i = 0; i < sz; i++) {
+            list.add(i);
+        }
+        list.remove(0);
+        return list.size() == sz - 1;
+    }
+
+    @Property
+    public boolean DeleteMiddle(@ForAll @IntRange(min = 1, max = 1000) int sz) {
+        LinkedList list = new LinkedList();
+        for (int i = 0; i < sz; i++) {
+            list.add(i);
+        }
+        list.remove(sz / 2);
+        return list.size() == sz - 1;
     }
 }
